@@ -1,10 +1,14 @@
 import './App.css';
-import Colors from './day01/state/Colors';
+import FoodContainer from './day02/map/basic/FoodContainer';
+import SportsContainer from './day02/map/basic/SportsContainer';
+import UserContainer from './day02/map/expert/UserContainer';
+import NameRef from './day02/ref/basic/NameRef';
+import Validation from './day02/ref/basic/Validation';
 
 function App() {
   return (
     <>
-      <Colors />
+      <Validation />
     </>
   );
 }

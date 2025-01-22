@@ -6,20 +6,30 @@ import React from 'react';
 // 1) 함수는 어떤 값을 받으면 콘솔에 출력해주는 함수
 // 2) 이름은 본인 이름의 변수
 
-const Component04 = (props) => {
-  console.log(props) // 서민아
-  const {buttonStyle, printValue} = props;
+// const Component04 = (props) => {
+//   console.log(props) // 서민아
+//   const {buttonStyle, printValue} = props;
 
-  // const printValue = () => {
-  //   printName(name)
-  // }
+//   // const printValue = () => {
+//   //   printName(name)
+//   // }
+
+//   return (
+//     <div>
+//       {/* {props.name} */}
+//       <button onClick={printValue} style={buttonStyle}>버튼</button>
+//     </div>
+//   );
+// };
+
+const Component04 = ({name, printValue}) => {
 
   return (
     <div>
-      {/* {props.name} */}
-      <button onClick={printValue} style={buttonStyle}>버튼</button>
+      <button onClick={() => { printValue(name) }}>클릭</button>    
     </div>
   );
 };
+
 
 export default Component04;
