@@ -19,8 +19,8 @@ const Validation = () => {
   return (
     <div>
       <form ref={formRef} action={"test"}>
-        <div><span>아이디</span><input ref={(el) => { inputRef.current[0] = el}} type="text" name='id' /></div>
-        <div><span>비밀번호</span><input ref={(el) => {inputRef.current[1] = el}}  type="password" name='password' /></div>
+        <div><span>아이디</span><input ref={(el) => { inputRef.current[0] = el }} type="text" name='id' /></div>
+        <div><span>비밀번호</span><input ref={(el) => { inputRef.current[1] = el }}  type="password" name='password' /></div>
         <button onClick={onClickToValidate} type='button'>전송</button>
       </form>
     </div>
