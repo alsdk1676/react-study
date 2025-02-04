@@ -1,4 +1,4 @@
-import React, { useEffect, useState, use } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // https://jsonplaceholder.typicode.com/todos
 // todos에서 false인 todos만 
