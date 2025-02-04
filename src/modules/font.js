@@ -1,19 +1,19 @@
 import { createAction, handleActions } from "redux-actions";
 
-const CHANGE_2REM = 'font/CHANGE_2REM'
-const INPUT_FONTSIZE = 'font/INPUT'
+const BIGGER = 'font/BIGGER'
+const INPUT_BIGGER = 'font/INPUT_BIGGER'
 
-export const change_2rem = createAction(CHANGE_2REM)
-export const input_fontSize = createAction(INPUT_FONTSIZE)
+export const bigger = createAction(BIGGER)
+export const inputBigger = createAction(INPUT_BIGGER)
 
 const initialState = {
   fontSize: "1rem",
-  inputFontSize : "2rem"
+  inputFontSize : "1rem"
 };
 
 const font = handleActions({
-  [CHANGE_2REM]: (state, action) => ({ fontSize : "3rem" }),
-  [INPUT_FONTSIZE]: (state, action) => ({ inputFontSize : state.inputFontSize, inputFontSize : action.payload }),
+  [BIGGER]: (state, action) => ({ ...state, fontSize : "3rem" }),
+  [INPUT_BIGGER]: (state, action) => ({ ...state, inputFontSize : action.payload }),
 }, initialState)
 
 export default font;

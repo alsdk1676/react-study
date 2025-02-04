@@ -1,12 +1,16 @@
+import { RouterProvider } from 'react-router-dom';
 import './App.css';
-import AnimalsContainer from './day05/context/expert/AnimalsContainer';
-import Counter from './day06/redux/Counter';
-import FontContainer from './day06/redux/FontContainer'
+import router from './day06/router/router';
 
 function App() {
   return (
     <>
-      <FontContainer />
+      {/* <Routes>
+        <Route path='/' element={<Main />} />
+        <Route path='/intro' element={<Intro />} />
+          <Route path=':title' element={<Intro />}></Route>
+      </Routes> */}
+      <RouterProvider router={router} />
     </>
   );
 }

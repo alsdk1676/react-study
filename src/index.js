@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom'
 
 // 리덕스
 import { legacy_createStore as createStore } from 'redux'
@@ -10,14 +11,17 @@ import { Provider } from 'react-redux'
 import { devToolsEnhancer } from '@redux-devtools/extension'
 import count from './modules/count';
 import font from './modules/font';
+import rootReducer from './modules';
 
 // store 생성
-const store = createStore(font, devToolsEnhancer())
+const store = createStore(rootReducer, devToolsEnhancer())
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-    <App />
+    {/* <BrowserRouter> */}
+      <App />
+    {/* </BrowserRouter> */}
   </Provider>
 );
 
