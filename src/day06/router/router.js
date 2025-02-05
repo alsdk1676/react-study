@@ -4,6 +4,8 @@ import Intro from "./Intro";
 import Layout from "../../pages/layout/Layout";
 import NotFound from "../../pages/error/NotFound";
 import PostContainer from "../../pages/post/_component/PostContainer";
+import Detail from "../../pages/post/_component/Detail";
+import List from "../../pages/post/_component/List";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +16,6 @@ const router = createBrowserRouter([
         path : "/intro",
         element : <Intro />,
       },
-      
     ]
   },
   {
@@ -23,7 +24,21 @@ const router = createBrowserRouter([
   },
   {
     path : "/post",
-    element : <PostContainer />
+    element : <PostContainer />,
+    children : [
+      {
+        index : true,
+        element : <List />,
+      },
+      {
+        path : ":id",
+        element : <Detail />,
+      }
+    ]
+  },
+  {
+    path : "/post/:id",
+    element : <Detail />,
   },
   {
     path : "*",
